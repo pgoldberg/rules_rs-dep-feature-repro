@@ -1,0 +1,9 @@
+[package]
+name = "repro"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# env_logger declares `color = ["dep:anstream", "dep:anstyle"]` and `auto-color = ["color",
+# "anstream/auto"]`
+env_logger = { version = "0.11", default-features = false, features = ["auto-color"] }
